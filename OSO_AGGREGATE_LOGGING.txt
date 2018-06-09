@@ -1,0 +1,135 @@
+
+  401  10/27/17 04:51:37 git branch
+  402  10/27/17 04:52:03 git checkout release-3.6
+  403  10/27/17 05:53:07 ls
+  404  10/27/17 05:53:11 cd vinay-test/3.6/
+  405  10/27/17 05:53:11 ls
+  406  10/27/17 05:53:13 cd openshift-ansible/
+  407  10/27/17 05:53:14 ls
+  408  10/27/17 05:56:10 cd /opt/tmp/
+  409  10/27/17 05:56:10 ls
+  410  10/27/17 05:56:12 df -h
+  411  10/27/17 05:56:37 ls
+  412  10/27/17 05:57:12 mkdir -p /root/vinay-test/original-3.6
+  413  10/27/17 05:57:22 mv /root/vinay-test/original-3.6/
+  414  10/27/17 05:57:28 mv openshift-ansible-release-3.6.zip /root/vinay-test/original-3.6/
+  415  10/27/17 05:57:35 cd /root/vinay-test/original-3.6/
+  416  10/27/17 05:57:36 ls
+  417  10/27/17 05:57:42 unzip openshift-ansible-release-3.6.zip 
+  418  10/27/17 05:57:46 ls
+  419  10/27/17 05:57:48 cd openshift-ansible-release-3.6
+  420  10/27/17 05:57:50 ls
+  421  10/27/17 05:57:58 cp /root/inv inv
+  422  10/27/17 05:58:24 ansible-playbook -i inv playbooks/byo/openshift-cluster/openshift-logging.yml 
+  423  10/27/17 05:58:43 rpm -qa | grep ansible
+  424  10/27/17 05:58:54 yum upgrade ansible
+  425  10/27/17 05:59:21 ansible-playbook -i inv playbooks/byo/openshift-cluster/openshift-logging.yml 
+  426  10/27/17 05:59:47 cat playbooks/byo/openshift-cluster/openshift-logging.yml 
+  427  10/27/17 06:01:34 oc projects
+  428  10/27/17 06:01:39 oc get all
+  429  10/27/17 06:04:13 ansible-playbook -i /root/openshift-ansible/inventory/byo/hosts playbooks/byo/openshift-cluster/openshift-logging.ym
+l 
+  430  10/27/17 06:04:37 ping lnpnprifosm010v.int.asurion.com
+  431  10/27/17 06:04:47 ssh cwr.vinay.khandalkar@lnpnprifosm010v.int.asurion.com
+  432  10/27/17 06:05:28 cat /root/.ssh/authorized_keys 
+  433  10/27/17 06:05:52 cat /root/.ssh/id_rsa.pub 
+ 434  10/27/17 06:06:10 ssh root@lnpnprifosm010v.int.asurion.com
+  435  10/27/17 06:07:05 ll /root/.ssh/authorized_keys
+  436  10/27/17 06:08:02 su - ansible
+  437  10/27/17 06:10:07 cd ..
+  438  10/27/17 06:10:07 ls
+  439  10/27/17 06:10:25 cp -r openshift-ansible-release-3.6 /home/ansible/
+  440  10/27/17 06:10:34 cd /home/ansible/
+  441  10/27/17 06:10:34 ll
+  442  10/27/17 06:10:40 chown ansible
+  443  10/27/17 06:10:47 chown ansible:ansible openshift-ansible-release-3.6/
+  444  10/27/17 06:10:48 ll
+  445  10/27/17 06:10:53 su - ansible
+  446  10/27/17 06:11:58 chown ansible:ansible openshift-ansible-release-3.6/ -R
+  447  10/27/17 06:11:59 su - ansible
+  448  10/27/17 06:18:22 locate ansible.cfg
+  449  10/27/17 06:18:37 find / -name ansible.cfg
+  450  10/27/17 06:19:15 su - ansible
+  451  10/27/17 06:22:05 vim /etc/sudoers
+  452  10/27/17 06:22:49 cp /etc/sudoers sudoers
+  453  10/27/17 06:22:55 sed -i 's/Defaults    requiretty/Defaults    !requiretty/g' /etc/sudoers
+  454  10/27/17 06:23:02 stat /etc/sudoers
+  455  10/27/17 06:23:11 su - ansible
+  456  10/27/17 06:26:52 oc projects
+  457  10/27/17 06:26:56 oc get all
+  458  10/27/17 06:34:43 oc describe rc/logging-kibana-1
+  459  10/27/17 08:59:45 oc login logging
+  460  10/27/17 08:59:50 oc project logging
+  461  10/27/17 09:03:29 cd /opt/tmp/
+  462  10/27/17 09:03:29 ll
+  463  10/27/17 09:03:49 cp * /root/vinay-test/
+  464  10/27/17 09:03:54 cd /root/vinay-test/
+  465  10/27/17 09:03:55 ll
+  466  10/27/17 09:04:04 chmod 755 ca_cert.pem
+  467  10/27/17 09:04:10 chmod 755 ca_key.pem 
+  468  10/27/17 09:04:12 ll
+  469  10/27/17 09:04:19 cd
+
+  
+Ansible ---
+
+  132  10/27/17 06:08:05 ls
+  133  10/27/17 06:08:07 cd openshift-ansible/
+  134  10/27/17 06:08:08 ls
+  135  10/27/17 06:08:19 cat inventory/byo/hosts
+  136  10/27/17 06:09:52 hostname
+  137  10/27/17 06:09:54 hostname -f
+  138  10/27/17 06:09:58 ssh LNPNPRIFOSM010V.int.asurion.com
+  139  10/27/17 06:10:54 ls
+  140  10/27/17 06:10:56 cd openshift-ansible
+  141  10/27/17 06:10:58 cd ..
+  142  10/27/17 06:11:02 cd openshift-ansible-release-3.6/
+  143  10/27/17 06:11:03 ls
+  144  10/27/17 06:11:50 ll
+  145  10/27/17 06:12:04 cd openshift-ansible-release-3.6/
+  146  10/27/17 06:13:06 ansible-playbook -i /home/ansible/openshift-ansible/inventory/byo/hosts playbooks/byo/openshift-cluster/openshift-logging.yml 
+  147  10/27/17 06:16:23 sudo su - 
+  148  10/27/17 06:19:18 vim /home/ansible/openshift-ansible-release-3.6/ansible.cfg
+  149  10/27/17 06:19:47 ls
+  150  10/27/17 06:19:50 cd openshift-ansible-release-3.6/
+  151  10/27/17 06:19:54 ansible-playbook -i /home/ansible/openshift-ansible/inventory/byo/hosts playbooks/byo/openshift-cluster/openshift-logging.yml 
+  152  10/27/17 06:23:17 cd openshift-ansible-release-3.6/
+  153  10/27/17 06:23:19 ansible-playbook -i /home/ansible/openshift-ansible/inventory/byo/hosts playbooks/byo/openshift-cluster/openshift-logging.yml 
+  154  10/27/17 06:26:37 oc projects
+  155  11/24/17 01:16:25 history 
+
+
+----
+
+
+  472  10/27/17 09:05:45 oc get secrets
+  473  10/27/17 09:06:21 oc patch secrets/logging-fluentd --type=json --patch "[{'op':'add','path':'/data/external_ca_cert.pem','value':'$(ba
+se64 -w 0 /root/vinay-test/ca_cert.pem)'}]"
+  474  10/27/17 09:06:32 oc patch secrets/logging-fluentd --type=json --patch "[{'op':'add','path':'/data/external_ca_key.pem','value':'$(bas
+e64 -w 0 /root/vinay-test/ca_key.pem)'}]"
+  475  10/27/17 09:07:13 oc edit configmap logging-fluentd
+  476  10/27/17 09:09:25 ll /etc/fluent/keys/external_ca_cert.pem
+  477  10/27/17 09:10:59 oc edit configmap logging-fluentd
+  478  10/29/17 01:04:34 find / -name secure-forward.conf
+  479  10/29/17 01:05:38 oc project logging
+  480  10/29/17 01:05:43 oc get all
+  481  10/29/17 01:06:19 oc edit configmap logging-fluentd
+  482  10/29/17 01:22:37 oc get all
+  483  10/29/17 01:22:56 oc delete pod -l component=fluentd
+  484  10/29/17 01:23:00 oc get all
+  485  10/29/17 01:27:30 oc edit configmap logging-fluentd
+  486  10/29/17 01:28:31 oc delete pod -l component=fluentd
+  487  10/29/17 01:28:48 oc get all
+  488  10/29/17 01:32:42 oc get pods -l component=fluentd
+  489  10/29/17 01:32:56 oc lofs logging-fluentd-9lpgs
+  490  10/29/17 01:33:01 oc logs logging-fluentd-9lpgs
+  491  10/29/17 07:50:06 ls
+  492  10/29/17 07:50:52 oc get pod -l component=fluentd
+  493  10/29/17 07:51:04 oc logs logging-fluentd-58hrx
+  494  10/29/17 07:55:58 oc get pod -l component=fluentd
+  495  10/29/17 07:56:11 oc logs logging-fluentd-vvvqn
+
+  
+  
+  
+  
