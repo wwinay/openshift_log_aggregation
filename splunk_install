@@ -1,0 +1,76 @@
+splunk install
+
+  905  groupadd splunk
+  906   useradd -d /opt/splunk -m -g splunk splunk
+  907  su - splunk
+  908  cat /etc/passwd
+  909  cd /opt/splunk/
+  910  ls
+  911  tar -xvf splunk-7.0.0-c8a78efdd40f-Linux-x86_64.tgz 
+  912  ls
+  913  cp -rp splunk/* /opt/splunk/
+  914  su -s plunk
+  915  su - splunk
+  916  chown -R splunk:splunk /opt/splunk/
+  917  ll
+  918  su - splunk
+  919  yum install lynx
+  920  lynx http://kub-minion1:8000
+  921  systemctl status firewalld
+  922  iptables -nL
+  923  iptables -F
+  924  iptables -nL
+  925  su - splunk
+
+  
+     2   getconf LONG_BIT
+    3  wget https://download.splunk.com/products/splunk/releases/7.0.0/linux/splunk-7.0.0-c8a78efdd40f-Linux-x86_64.tgz
+    4  ls
+    5  mv splunk-7.0.0-c8a78efdd40f-Linux-x86_64.tgz /opt/
+    6  ls
+    7  cd /opt/splunk/
+    8  cd bin/
+    9  ls
+   10  ll
+   11  cd ..
+   12  ll
+   13  id
+   14  cd bin/
+   15  ll
+   16  ./splunk start --acceprt-license
+   17  ls
+   18  ./splunk status
+   19  ./splunk start --accept-license
+   20  splunk status
+   21  ifconfig 
+   22  netstat -tunlp
+   23  curl http://kub-minion1:8000
+   24  cd /opt/splunk/
+   25  ls
+   26  find /opt/splunk/* -name props.conf
+   27  less /opt/splunk/etc/apps/learned/local/props.conf
+   28  man /opt/splunk/etc/apps/search/default/props.conf
+   29  less /opt/splunk/etc/apps/search/default/props.conf
+   30  vim /opt/splunk/etc/apps/search/default/props.conf
+   31  vim /opt/splunk/splunk/etc/apps/search/default/props.conf
+   32  ls
+   33  cd bin/
+   34  splunk restart
+   35  ifconfig 
+   36  splunk status
+   37  lynx http://kub-minion1:8000
+   38  df -h
+   39  systemctl status splunk
+   40  cd bin/
+   41  ls
+   42  splunk status
+   43  splunk restart
+   44  df -h
+   45  date
+   46  ifconfig 
+   47  splunk restart
+   48  ifconfig 
+   49  cd /opt/splunk/bin/
+   50  ls
+   51  splunk status
+   52  splunk restart
