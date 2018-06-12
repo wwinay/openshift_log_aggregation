@@ -30,7 +30,7 @@
   429  10/27/17 06:04:13 ansible-playbook -i /root/openshift-ansible/inventory/byo/hosts playbooks/byo/openshift-cluster/openshift-logging.ym
 l 
   430  10/27/17 06:04:37 ping server
-  431  10/27/17 06:04:47 ssh cwr.vinay.khandalkar@server
+  431  10/27/17 06:04:47 ssh user@server
   432  10/27/17 06:05:28 cat /root/.ssh/authorized_keys 
   433  10/27/17 06:05:52 cat /root/.ssh/id_rsa.pub 
  434  10/27/17 06:06:10 ssh root@server
