@@ -29,11 +29,11 @@
   428  10/27/17 06:01:39 oc get all
   429  10/27/17 06:04:13 ansible-playbook -i /root/openshift-ansible/inventory/byo/hosts playbooks/byo/openshift-cluster/openshift-logging.ym
 l 
-  430  10/27/17 06:04:37 ping lnpnprifosm010v.int.asurion.com
-  431  10/27/17 06:04:47 ssh cwr.vinay.khandalkar@lnpnprifosm010v.int.asurion.com
+  430  10/27/17 06:04:37 ping server
+  431  10/27/17 06:04:47 ssh cwr.vinay.khandalkar@server
   432  10/27/17 06:05:28 cat /root/.ssh/authorized_keys 
   433  10/27/17 06:05:52 cat /root/.ssh/id_rsa.pub 
- 434  10/27/17 06:06:10 ssh root@lnpnprifosm010v.int.asurion.com
+ 434  10/27/17 06:06:10 ssh root@server
   435  10/27/17 06:07:05 ll /root/.ssh/authorized_keys
   436  10/27/17 06:08:02 su - ansible
   437  10/27/17 06:10:07 cd ..
@@ -79,7 +79,7 @@ Ansible ---
   135  10/27/17 06:08:19 cat inventory/byo/hosts
   136  10/27/17 06:09:52 hostname
   137  10/27/17 06:09:54 hostname -f
-  138  10/27/17 06:09:58 ssh LNPNPRIFOSM010V.int.asurion.com
+  138  10/27/17 06:09:58 ssh server1
   139  10/27/17 06:10:54 ls
   140  10/27/17 06:10:56 cd openshift-ansible
   141  10/27/17 06:10:58 cd ..
